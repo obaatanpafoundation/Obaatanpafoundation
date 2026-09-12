@@ -1,0 +1,156 @@
+---
+layout: base.njk
+title: Care and compassion in Amenfi East
+description: The Obaatanpa Foundation serves the Amenfi East Municipality through the Feed the Aged project, healthcare support for Wassa Akropong Government Hospital, and youth empowerment in schools.
+permalink: /index.html
+---
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>{{ home.heading }}</h1>
+      <p class="hero-lede">{{ home.lede }}</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="/donate/">Support our work</a>
+        <a class="btn btn-line" href="#programmes">See what we do</a>
+      </div>
+      <p class="meaning"><b>Obaatanpa</b> &mdash; {{ home.meaning }}</p>
+    </div>
+
+    <figure class="hero-figure" style="margin:0">
+      {% if home.heroImage %}
+      <img src="{{ home.heroImage }}" alt="{{ home.heroAlt }}">
+      {% else %}
+      <div class="photo"><span>PHOTO SLOT</span>Add a hero photo in the content manager, under Homepage.</div>
+      {% endif %}
+      {% if home.heroCaption %}<figcaption class="figcap">{{ home.heroCaption }}</figcaption>{% endif %}
+    </figure>
+  </div>
+</section>
+
+<section class="stats" aria-label="Our work in numbers">
+  <div class="wrap">
+    <div class="stats-in">
+      {% for s in site.stats %}
+      <div class="stat"><span class="stat-num">{{ s.number }}</span><span class="stat-lab">{{ s.label }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="programmes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we do.</h2>
+      <p class="lede">Three areas of work, all of them in the Amenfi East Municipality, all of them chosen because someone in the community asked.</p>
+    </div>
+    <div class="prog">
+      {% for p in home.programmes %}
+      <article>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.body }}</p>
+        {% if p.metaLabel %}<dl><dt>{{ p.metaLabel }}</dt><dd>{{ p.metaValue }}</dd></dl>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-in">
+    <figure class="hero-figure" style="margin:0">
+      {% if home.quoteImage %}
+      <img src="{{ home.quoteImage }}" alt="{{ home.quoteImageAlt }}">
+      {% else %}
+      <div class="photo"><span>PHOTO SLOT</span>Add a portrait in the content manager, under Homepage.</div>
+      {% endif %}
+    </figure>
+    <blockquote>
+      <q>{{ home.quote }}</q>
+      <cite><b>{{ home.quoteName }}</b>{{ home.quoteRole }}</cite>
+      <p>{{ home.quoteContext }}</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="sec sec-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Who leads the work.</h2>
+      <p class="lede">A small team, drawn from the community it serves. <a class="link" href="/leadership/">Meet everyone</a></p>
+    </div>
+    <div class="exec-grid">
+      {% for person in collections.executives | limit(3) %}
+      <article class="exec">
+        {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
+        {% else %}<div class="thumb photo photo-light"><span>PHOTO</span>Square portrait.</div>{% endif %}
+        <div class="exec-body">
+          <h3>{{ person.data.name }}</h3>
+          <p class="role">{{ person.data.role }}</p>
+          <p>{{ person.data.bio }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Coming up.</h2>
+      <p class="lede">Outreaches, feeding programmes and school sessions. Everyone is welcome. <a class="link" href="/events/">See all events</a></p>
+    </div>
+    <div class="events">
+      {% if collections.upcomingEvents.length %}
+        {% for e in collections.upcomingEvents | limit(2) %}
+        <article class="event">
+          <div class="date-badge">
+            <span class="d">{{ e.data.date | dayNum }}</span>
+            <span class="m">{{ e.data.date | monShort }}</span>
+            <span class="y">{{ e.data.date | yearNum }}</span>
+          </div>
+          <div>
+            <h3>{{ e.data.title }}</h3>
+            <p class="meta">{{ e.data.time }}{% if e.data.venue %} &middot; {{ e.data.venue }}{% endif %}</p>
+            <p>{{ e.data.summary }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      {% else %}
+        <p class="lede">Nothing scheduled at the moment. <a class="link" href="/contact/">Ask us what is coming next.</a></p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Latest.</h2>
+      <p class="lede">Reports from our outreaches. <a class="link" href="/news/">Read all news</a></p>
+    </div>
+    <div class="news">
+      {% for post in collections.posts | limit(3) %}
+      <article>
+        <time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.data.standfirst }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="signup" id="newsletter">
+  <div class="wrap signup-in">
+    <div>
+      <h2>Hear about the next outreach.</h2>
+      <p>Occasional updates on where we will be and what is needed.</p>
+    </div>
+    <div>
+      <p class="form-note" style="font-size:1rem">Write to us at
+        <a href="mailto:{{ site.email }}" style="color:var(--gold)">{{ site.email }}</a>
+        and we will add you to the list.</p>
+    </div>
+  </div>
+</section>

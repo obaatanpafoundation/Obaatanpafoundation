@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: Leadership
+description: The executives and volunteers who lead the Obaatanpa Foundation in the Amenfi East Municipality.
+permalink: /leadership/index.html
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Leadership</p>
+    <h1>The people behind the work.</h1>
+    <p>Every name and face here is accountable for what the foundation does. If you have a question for any of us, our door is open.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    {% for person in collections.executives %}
+      {% if person.data.featured %}
+      <div class="exec-lead">
+        {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
+        {% else %}<div class="thumb photo photo-light"><span>PHOTO SLOT</span>Portrait, about 800x1000px.</div>{% endif %}
+        <div class="exec-lead-body">
+          <h3>{{ person.data.name }}</h3>
+          <p class="role">{{ person.data.role }}</p>
+          <p>{{ person.data.bio }}</p>
+          {% if person.data.note %}<p style="margin-top:1rem;font-size:.95rem"><em>{{ person.data.note }}</em></p>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="exec-grid">
+      {% for person in collections.executives %}
+        {% if not person.data.featured %}
+        <article class="exec">
+          {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
+          {% else %}<div class="thumb photo photo-light"><span>PHOTO</span>Square portrait, 600x600px.</div>{% endif %}
+          <div class="exec-body">
+            <h3>{{ person.data.name }}</h3>
+            <p class="role">{{ person.data.role }}</p>
+            <p>{{ person.data.bio }}</p>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Volunteers.</h2>
+      <p class="lede">No outreach happens without the people who give up a Saturday. If you would like to join them, we would be glad to hear from you.</p>
+    </div>
+    <a class="btn btn-dark" href="/contact/">Volunteer with us</a>
+  </div>
+</section>

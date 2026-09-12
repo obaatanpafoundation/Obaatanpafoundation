@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Events
+description: Upcoming outreaches, feeding programmes and school sessions across the Amenfi East Municipality.
+permalink: /events/index.html
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Events</p>
+    <h1>Where we will be next.</h1>
+    <p>Feeding programmes, hospital visits and school sessions across Amenfi East. Everyone is welcome, and volunteers are always needed.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><h2>Upcoming.</h2></div>
+    <div class="events">
+      {% for e in collections.upcomingEvents %}
+        <article class="event">
+          <div class="date-badge">
+            <span class="d">{{ e.data.date | dayNum }}</span>
+            <span class="m">{{ e.data.date | monShort }}</span>
+            <span class="y">{{ e.data.date | yearNum }}</span>
+          </div>
+          <div>
+            <h3>{{ e.data.title }}</h3>
+            <p class="meta">{{ e.data.time }}{% if e.data.venue %} &middot; {{ e.data.venue }}{% endif %}</p>
+            <p>{{ e.data.summary }}</p>
+            <p style="margin-top:.7rem"><a class="link" href="/contact/">Ask about this event</a></p>
+          </div>
+        </article>
+      {% endfor %}
+      {% if not collections.upcomingEvents.length %}
+      <p class="lede">Nothing scheduled at the moment. <a class="link" href="/contact/">Get in touch</a> and we will tell you what is being planned.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Recently.</h2>
+      <p class="lede">Photographs from outreaches that have already happened.</p>
+    </div>
+    {% for e in collections.pastEvents %}
+      <article style="margin-bottom:3rem">
+        <p class="tag">{{ e.data.date | readableDate }}</p>
+        <h3 style="font-size:var(--step-2);margin-bottom:.6rem">{{ e.data.title }}</h3>
+        <p style="color:var(--muted);max-width:68ch">{{ e.data.summary }}</p>
+        {% if e.data.gallery and e.data.gallery.length %}
+        <div class="media-grid">
+          {% for shot in e.data.gallery %}<img src="{{ shot.image }}" alt="{{ shot.alt }}">{% endfor %}
+        </div>
+        {% endif %}
+        {% if e.data.video %}<div class="video">{{ e.data.video | safe }}</div>{% endif %}
+      </article>
+    {% endfor %}
+    {% if not collections.pastEvents.length %}
+    <p class="lede">Past events will appear here once they are added.</p>
+    {% endif %}
+  </div>
+</section>

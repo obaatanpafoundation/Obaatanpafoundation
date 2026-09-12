@@ -1,0 +1,117 @@
+---
+layout: base.njk
+title: Give
+description: Choose an amount and see what it pays for. Give once or monthly by mobile money or bank transfer.
+permalink: /donate/index.html
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Give</p>
+    <h1>Choose an amount. See what it buys.</h1>
+    <p>We would rather tell you exactly what your money becomes than ask you to trust us.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="give-grid">
+      <div>
+        <div class="toggle" id="freq-toggle" role="group" aria-label="Give once or monthly">
+          <button type="button" data-mode="once" aria-pressed="true">Give once</button>
+          <button type="button" data-mode="monthly" aria-pressed="false">Give monthly</button>
+        </div>
+
+        <div class="amounts" role="group" aria-label="Choose an amount in Ghana cedis">
+          <button class="amt" type="button" data-amount="50" aria-pressed="false"
+            data-once="Sends [one crate] of eggs to the Wassa Akropong Government Hospital."
+            data-monthly="Sends [one crate] of eggs to the hospital every month of the year.">GH&#8373;50</button>
+          <button class="amt" type="button" data-amount="150" aria-pressed="false"
+            data-once="Provides a hot meal for [00] elders at a Feed the Aged gathering."
+            data-monthly="Feeds [00] elders every month, all year.">GH&#8373;150</button>
+          <button class="amt" type="button" data-amount="400" aria-pressed="true"
+            data-once="Covers materials and transport for one school health and wellness session."
+            data-monthly="Puts our team into one school every month of the school year.">GH&#8373;400</button>
+          <button class="amt" type="button" data-amount="1000" aria-pressed="false"
+            data-once="Funds a church visit and feeding programme for [00] senior citizens."
+            data-monthly="Sustains the Feed the Aged programme month after month.">GH&#8373;1,000</button>
+          <button class="amt" type="button" data-amount="5000" aria-pressed="false"
+            data-once="Underwrites a full outreach day: hospital donation in the morning, school session in the afternoon."
+            data-monthly="Underwrites a full outreach day every single month.">GH&#8373;5,000</button>
+        </div>
+
+        <p class="effect" id="effect" role="status">Covers materials and transport for one school health and wellness session.</p>
+
+        <div class="custom">
+          <label for="custom-amount">Other amount in Ghana cedis</label>
+          <input id="custom-amount" type="number" min="1" step="1" placeholder="Other amount (GH&#8373;)" inputmode="numeric">
+          <a class="btn btn-dark" href="#how-to-pay" id="give-btn">Give GH&#8373;400</a>
+        </div>
+
+        <div class="pay" id="how-to-pay">
+          <h3>Ways to give</h3>
+          <ul>
+            <li><b>MTN MoMo</b> &mdash; {{ site.momoMtn }}</li>
+            <li><b>Telecel Cash</b> &mdash; {{ site.momoTelecel }}</li>
+            <li><b>AT Money</b> &mdash; {{ site.momoAt }}</li>
+            <li><b>Bank transfer</b> &mdash; {{ site.bank }}</li>
+            <li><b>In person</b> &mdash; visit us in {{ site.addressLine1 }}, or speak to any member of the team at an outreach</li>
+          </ul>
+          <p style="margin-top:1rem;color:var(--muted);font-size:.95rem">
+            Please use your own name as the payment reference so we can thank you properly. If you would rather give quietly, use the word ANON instead.
+          </p>
+        </div>
+      </div>
+
+      <div class="other-ways">
+        <article>
+          <h3>Give in kind</h3>
+          <p>Food items, hospital consumables, exercise books and sanitary products all go straight to where they are needed. Tell us what you have and we will say honestly whether we can use it.</p>
+          <a class="link" href="/contact/">Ask what is needed</a>
+        </article>
+        <article>
+          <h3>Give your time</h3>
+          <p>No outreach happens without volunteers &mdash; serving food, carrying items, registering guests, taking photographs.</p>
+          <a class="link" href="/contact/">Volunteer with us</a>
+        </article>
+        <article>
+          <h3>Companies and institutions</h3>
+          <p>We will report back with photographs and figures after every outreach we run together.</p>
+          <a class="link" href="/contact/">Talk to us about partnership</a>
+        </article>
+        <article>
+          <h3>Mark an occasion</h3>
+          <p>Birthdays, funerals, weddings, harvests. Ask your guests to give to an outreach in your name and we will name the occasion when we deliver.</p>
+          <a class="link" href="/contact/">Tell us what you are planning</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light">
+  <div class="wrap">
+    <div class="sec-head"><h2>Questions people ask.</h2></div>
+    <div class="faq">
+      <details>
+        <summary>How do I know the money reached the people you say?</summary>
+        <p>Every outreach is written up on this site and posted on our Facebook page, with photographs and the names of those who received the donation where they have agreed to be named.</p>
+      </details>
+      <details>
+        <summary>Can I choose which programme my gift supports?</summary>
+        <p>Yes &mdash; tell us when you give and we will apply it to Feed the Aged, healthcare support, or the school outreach. If you do not specify, we use it where the need is greatest that month.</p>
+      </details>
+      <details>
+        <summary>Can I give from outside Ghana?</summary>
+        <p>[Add international transfer details, or a card payment link once you have one. Paystack and Hubtel both work well for Ghanaian organisations and handle mobile money and cards together.]</p>
+      </details>
+      <details>
+        <summary>Is the foundation registered?</summary>
+        <p>[Answer plainly. If registration is complete, give the number. If it is in progress, say so and say when you expect it.]</p>
+      </details>
+      <details>
+        <summary>Will you keep contacting me?</summary>
+        <p>Only if you ask us to. We do not sell or share supporter details with anyone. See our <a href="/privacy/">privacy notice</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>

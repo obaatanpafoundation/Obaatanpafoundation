@@ -1,0 +1,37 @@
+{
+  "name": "Obaatanpa Foundation",
+  "tagline": "Care, compassion and commitment to community development across the Amenfi East Municipality.",
+  "url": "https://obaatanpafoundation.org",
+  "email": "obaatanpafoundation2025@gmail.com",
+  "phone": "+233 24 000 0000",
+  "addressLine1": "Wassa Akropong",
+  "addressLine2": "Amenfi East Municipality",
+  "addressLine3": "Western Region, Ghana",
+  "openingHours": "[Opening days and hours]",
+  "registration": "[registration number]",
+  "facebook": "#",
+  "instagram": "#",
+  "tiktok": "#",
+  "momoMtn": "[024 000 0000]",
+  "momoTelecel": "[050 000 0000]",
+  "momoAt": "[026 000 0000]",
+  "bank": "[Bank name], account [number], [branch]",
+  "stats": [
+    {
+      "number": "100",
+      "label": "crates of eggs donated to Wassa Akropong Government Hospital"
+    },
+    {
+      "number": "[00]",
+      "label": "senior citizens served through the Feed the Aged project"
+    },
+    {
+      "number": "[00]",
+      "label": "students reached through school outreach sessions"
+    },
+    {
+      "number": "[00]",
+      "label": "communities visited across Amenfi East"
+    }
+  ]
+}

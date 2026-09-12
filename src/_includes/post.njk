@@ -1,0 +1,55 @@
+---
+layout: base.njk
+---
+<article>
+<header class="post-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/news/">News</a> &rsaquo; {{ category }}</p>
+    <p class="tag">{{ category }}</p>
+    <h1>{{ title }}</h1>
+    {% if standfirst %}<p class="standfirst">{{ standfirst }}</p>{% endif %}
+    <div class="post-meta">
+      <span>{{ site.name }}, {{ site.addressLine1 }}</span>
+      <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+    </div>
+  </div>
+</header>
+
+  <div class="post-wrap">
+    {% if cover %}
+    <figure class="post-figure">
+      <img src="{{ cover }}" alt="{{ coverAlt }}">
+      {% if coverCaption %}<figcaption>{{ coverCaption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+
+    {% if gallery and gallery.length %}
+    <div class="media-grid">
+      {% for shot in gallery %}<img src="{{ shot.image }}" alt="{{ shot.alt }}">{% endfor %}
+    </div>
+    {% endif %}
+
+    {% if video %}
+    <div class="video">{{ video | safe }}</div>
+    {% endif %}
+
+    <div class="post-foot">
+      <p style="margin:0;color:var(--muted)">{{ site.name }}, {{ site.addressLine1 }}</p>
+      <p class="share" style="margin:0"><a href="/news/">All news</a> &middot; <a href="/donate/">Support this work</a></p>
+    </div>
+  </div>
+</article>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Every gift becomes something a neighbour can hold.</h2>
+      <p>A crate of eggs, a hot meal, a term's exercise books.</p>
+    </div>
+    <a class="btn btn-dark" href="/donate/">Give today</a>
+  </div>
+</section>

@@ -1,0 +1,155 @@
+backend:
+  name: github
+  repo: obaatanpafoundation/Obaatanpafoundation
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+# Shrink photos in the browser before they are saved, so a 6MB phone
+# photo does not end up slowing the site down on a mobile connection.
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 80
+          width: 1600
+          height: 1600
+
+collections:
+  # ---------------------------------------------------------------- news
+  - name: news
+    label: News stories
+    label_singular: News story
+    folder: src/news
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Headline, widget: string, hint: "Say what happened, not that something happened." }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - name: category
+        label: Category
+        widget: select
+        options: [Feed the Aged, Healthcare Support, Youth Empowerment, Events, Announcement]
+      - { name: standfirst, label: Summary line, widget: text, hint: "One sentence with the real number in it if you have one. Shows on the news listing." }
+      - { name: cover, label: Cover photo, widget: image, required: false }
+      - { name: coverAlt, label: Cover photo description, widget: string, required: false, hint: "Describe the photo for blind visitors. Do not write 'photo of'." }
+      - { name: coverCaption, label: Cover photo caption, widget: string, required: false }
+      - { name: body, label: Story, widget: markdown }
+      - name: gallery
+        label: More photos
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - { name: image, label: Photo, widget: image }
+          - { name: alt, label: Description, widget: string, required: false }
+      - { name: video, label: Video embed code, widget: text, required: false, hint: "Paste the whole <iframe> from YouTube (Share > Embed) or Facebook (... > Embed). Leave empty for no video." }
+
+  # -------------------------------------------------------------- events
+  - name: events
+    label: Events
+    label_singular: Event
+    folder: src/events
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Event name, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: time, label: Time, widget: string, required: false, hint: "For example 10:00am" }
+      - { name: venue, label: Venue, widget: string, required: false }
+      - { name: upcoming, label: "Still to come?", widget: boolean, default: true, hint: "Turn this off after the event has happened and it moves to the Recently section." }
+      - { name: summary, label: Description, widget: text }
+      - name: gallery
+        label: Photos (after the event)
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - { name: image, label: Photo, widget: image }
+          - { name: alt, label: Description, widget: string, required: false }
+      - { name: video, label: Video embed code, widget: text, required: false }
+
+  # --------------------------------------------------------- executives
+  - name: executives
+    label: Leadership
+    label_singular: Person
+    folder: src/executives
+    create: true
+    slug: "{{slug}}"
+    summary: "{{name}} — {{role}}"
+    sortable_fields: [order, name]
+    fields:
+      - { name: name, label: Full name, widget: string }
+      - { name: role, label: Role, widget: string }
+      - { name: order, label: Order on the page, widget: number, default: 2, value_type: int, min: 1 }
+      - { name: featured, label: "Show as the large card at the top?", widget: boolean, default: false }
+      - { name: photo, label: Photograph, widget: image, required: false }
+      - { name: bio, label: About this person, widget: text }
+      - { name: note, label: Extra note, widget: string, required: false, hint: "Optional italic line under the large card." }
+
+  # ------------------------------------------------------------ settings
+  - name: settings
+    label: Site settings
+    files:
+      - name: contact
+        label: Contact details and numbers
+        file: src/_data/site.json
+        fields:
+          - { name: name, label: Organisation name, widget: string }
+          - { name: tagline, label: Footer tagline, widget: text }
+          - { name: url, label: Website address, widget: string }
+          - { name: email, label: Email address, widget: string }
+          - { name: phone, label: Phone number, widget: string }
+          - { name: addressLine1, label: Address line 1, widget: string }
+          - { name: addressLine2, label: Address line 2, widget: string }
+          - { name: addressLine3, label: Address line 3, widget: string }
+          - { name: openingHours, label: Opening hours, widget: string, required: false }
+          - { name: registration, label: Registration number, widget: string, required: false }
+          - { name: facebook, label: Facebook link, widget: string, required: false }
+          - { name: instagram, label: Instagram link, widget: string, required: false }
+          - { name: tiktok, label: TikTok link, widget: string, required: false }
+          - { name: momoMtn, label: MTN MoMo number, widget: string, required: false }
+          - { name: momoTelecel, label: Telecel Cash number, widget: string, required: false }
+          - { name: momoAt, label: AT Money number, widget: string, required: false }
+          - { name: bank, label: Bank details, widget: string, required: false }
+          - name: stats
+            label: Numbers on the homepage
+            widget: list
+            max: 4
+            summary: "{{fields.number}} — {{fields.label}}"
+            fields:
+              - { name: number, label: Number, widget: string }
+              - { name: label, label: What it counts, widget: string }
+
+      - name: homepage
+        label: Homepage
+        file: src/_data/home.json
+        fields:
+          - { name: heading, label: Main heading, widget: string }
+          - { name: lede, label: Opening paragraph, widget: text }
+          - { name: meaning, label: Meaning of the name, widget: text }
+          - { name: heroImage, label: Hero photo, widget: image, required: false }
+          - { name: heroAlt, label: Hero photo description, widget: string, required: false }
+          - { name: heroCaption, label: Hero photo caption, widget: string, required: false }
+          - { name: quote, label: Quotation, widget: text }
+          - { name: quoteName, label: Who said it, widget: string }
+          - { name: quoteRole, label: Their role, widget: string }
+          - { name: quoteContext, label: Where and when they said it, widget: text }
+          - { name: quoteImage, label: Photo beside the quotation, widget: image, required: false }
+          - { name: quoteImageAlt, label: Photo description, widget: string, required: false }
+          - name: programmes
+            label: The three programmes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Programme name, widget: string }
+              - { name: body, label: Description, widget: text }
+              - { name: metaLabel, label: Small label, widget: string, required: false }
+              - { name: metaValue, label: Small value, widget: string, required: false }

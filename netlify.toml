@@ -1,0 +1,21 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+# Old addresses from the hand-built version
+[[redirects]]
+  from = "/news-eggs.html"
+  to = "/news/eggs/"
+  status = 301
+
+[[redirects]]
+  from = "/news-orientation.html"
+  to = "/news/orientation/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

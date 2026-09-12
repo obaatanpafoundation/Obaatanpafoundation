@@ -1,0 +1,77 @@
+---
+layout: base.njk
+title: Contact
+description: Reach the Obaatanpa Foundation in Wassa Akropong for enquiries, partnerships, volunteering and safeguarding concerns.
+permalink: /contact/index.html
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Contact</p>
+    <h1>Talk to us.</h1>
+    <p>We are in {{ site.addressLine1 }} and we answer quickly. If your message concerns the safety of a child or a vulnerable adult, use the safeguarding route below.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cards-2">
+      <article class="contact-card">
+        <h3>General enquiries</h3>
+        <p>Anything that does not fit the categories below.</p>
+        <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </article>
+      <article class="contact-card">
+        <h3>Giving and partnerships</h3>
+        <p>Companies, churches, institutions and individual supporters. Please put <strong>PARTNERSHIP</strong> in the subject line.</p>
+        <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </article>
+      <article class="contact-card">
+        <h3>Volunteering</h3>
+        <p>Join an outreach. Tell us what you can do and which Saturdays you are free. Please put <strong>VOLUNTEER</strong> in the subject line.</p>
+        <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </article>
+      <article class="contact-card" style="border-color:var(--kola);border-width:2px">
+        <h3>Safeguarding concerns</h3>
+        <p>If you believe a child, a student or an elder is at risk from anything connected to our work, tell us. Reports can be anonymous, and no one is penalised for raising a concern in good faith. Please put <strong>SAFEGUARDING</strong> in the subject line.</p>
+        <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        <a class="link" href="/safeguarding/">Read the policy</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light">
+  <div class="wrap two-col">
+    <div>
+      <h2 style="font-size:var(--step-3);margin-bottom:1rem">Find us</h2>
+      <address style="font-style:normal;color:var(--muted);line-height:1.8;margin-bottom:1.5rem">
+        {{ site.name }}<br>
+        {{ site.addressLine1 }}<br>
+        {{ site.addressLine2 }}<br>
+        {{ site.addressLine3 }}<br><br>
+        {{ site.openingHours }}<br>
+        <a class="link" href="tel:{{ site.phone | telLink }}">{{ site.phone }}</a><br>
+        <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </address>
+    </div>
+
+    <div>
+      <h2 style="font-size:var(--step-3);margin-bottom:1rem">Invite us</h2>
+      <p style="color:var(--muted);max-width:60ch;margin-bottom:1.5rem">If you run a school, a church, a clinic or a community group in Amenfi East and would like the Obaatanpa team to visit, write to us.</p>
+      <ol class="steps">
+        <li>
+          <h3>Write with the details</h3>
+          <p>Where you are, roughly how many people, and what you would like us to bring or speak about.</p>
+        </li>
+        <li>
+          <h3>We visit first</h3>
+          <p>Someone from the team comes to see the place and meet whoever is responsible before anything is agreed.</p>
+        </li>
+        <li>
+          <h3>We set a date</h3>
+          <p>Once agreed, the outreach goes on our <a class="link" href="/events/">events page</a> so others can join or support it.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>

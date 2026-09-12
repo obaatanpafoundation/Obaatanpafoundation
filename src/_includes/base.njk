@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} — {{ site.name }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title }} — {{ site.name }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ site.url }}/images/social-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230F2E27'/><path d='M16 7c5 0 8 3.2 8 7.4 0 4-3 6.3-8 10.6-5-4.3-8-6.6-8-10.6C8 10.2 11 7 16 7z' fill='none' stroke='%23E0A83C' stroke-width='2.2'/><circle cx='16' cy='14.4' r='2.6' fill='%23E0A83C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="/">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.8"/>
+        <circle cx="16" cy="13.3" r="3" fill="#E0A83C"/>
+      </svg>
+      <span class="brand-name">Obaatanpa<span class="brand-sub">FOUNDATION</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      <a href="/leadership/"{% if page.url == '/leadership/' %} aria-current="page"{% endif %}>Leadership</a>
+      <a href="/events/"{% if page.url == '/events/' %} aria-current="page"{% endif %}>Events</a>
+      <a href="/news/"{% if page.url.startsWith('/news') %} aria-current="page"{% endif %}>News</a>
+      <a href="/contact/"{% if page.url == '/contact/' %} aria-current="page"{% endif %}>Contact</a>
+      <a class="btn btn-gold" href="/donate/">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/" style="margin-bottom:.5rem">
+          <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.8"/>
+            <circle cx="16" cy="13.3" r="3" fill="#E0A83C"/>
+          </svg>
+          <span class="brand-name">Obaatanpa<span class="brand-sub">FOUNDATION</span></span>
+        </a>
+        <p class="foot-blurb">{{ site.tagline }}</p>
+      </div>
+      <div>
+        <h3>Our work</h3>
+        <ul>
+          <li><a href="/#programmes">Feed the Aged</a></li>
+          <li><a href="/#programmes">Healthcare Support</a></li>
+          <li><a href="/#programmes">Youth Empowerment</a></li>
+          <li><a href="/about/">How we work</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get involved</h3>
+        <ul>
+          <li><a href="/donate/">Give</a></li>
+          <li><a href="/events/">Upcoming events</a></li>
+          <li><a href="/contact/">Volunteer</a></li>
+          <li><a href="/contact/">Partner with us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <address>
+          {{ site.addressLine1 }}<br>
+          {{ site.addressLine2 }}<br>
+          {{ site.addressLine3 }}<br>
+          <a href="tel:{{ site.phone | telLink }}">{{ site.phone }}</a><br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </address>
+        <ul style="margin-top:1rem">
+          <li><a href="{{ site.facebook }}">Facebook</a> &middot; <a href="{{ site.instagram }}">Instagram</a> &middot; <a href="{{ site.tiktok }}">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p style="margin:0">&copy; <span id="year">2026</span> {{ site.name }}. Registered in Ghana, {{ site.registration }}.</p>
+      <p style="margin:0"><a href="/privacy/">Privacy</a> &middot; <a href="/safeguarding/">Safeguarding</a> &middot; <a href="/about/#accountability">Accountability</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+</body>
+</html>

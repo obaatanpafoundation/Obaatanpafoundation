@@ -1,0 +1,34 @@
+{
+  "heading": "Care, compassion, commitment.",
+  "lede": "The Obaatanpa Foundation serves the people of the Amenfi East Municipality \u2014 feeding our elders, supporting the Wassa Akropong Government Hospital, and equipping young people with the knowledge to protect themselves.",
+  "meaning": "in Twi, the good mother. The one who provides, who protects, and who does not count the cost. It is the standard we hold ourselves to.",
+  "heroImage": "",
+  "heroAlt": "",
+  "heroCaption": "[Caption: who is in the photograph, where, and when.]",
+  "quote": "The OBAATANPA Project is about care, compassion, and commitment to community development. We believe good health is a foundation for progress.",
+  "quoteName": "Madam Angela Ahimah",
+  "quoteRole": "Founder and Chief Executive Officer",
+  "quoteContext": "Speaking at the presentation of 100 crates of eggs to the Wassa Akropong Government Hospital, November 2025.",
+  "quoteImage": "",
+  "quoteImageAlt": "",
+  "programmes": [
+    {
+      "title": "Feed the Aged",
+      "body": "Grand feeding programmes for senior citizens, and visits to local churches across Wassa Akropong to sit with our elders, share a meal and hear what they need. Old age should not mean being forgotten.",
+      "metaLabel": "Where",
+      "metaValue": "Wassa Akropong"
+    },
+    {
+      "title": "Healthcare Support",
+      "body": "Essential items and nutritional support for the Wassa Akropong Government Hospital, easing the pressure on the food supply and supporting patients' recovery. In November 2025 we delivered 100 crates of eggs.",
+      "metaLabel": "Partner",
+      "metaValue": "Wassa Akropong Gov't Hospital"
+    },
+    {
+      "title": "Youth Empowerment",
+      "body": "Orientation sessions in senior high schools covering gender-based violence and reproductive health rights, adolescent health and hygiene, mental health and peer pressure, and bullying and discrimination.",
+      "metaLabel": "Recent",
+      "metaValue": "Amenfiman SHS"
+    }
+  ]
+}
