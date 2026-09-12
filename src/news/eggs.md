@@ -3,12 +3,13 @@ title: 100 crates of eggs for Wassa Akropong Government Hospital
 date: 2025-11-04
 category: Healthcare Support
 standfirst: Delivered by hand on a Tuesday morning, to support patients' nutrition and ease the pressure on the hospital's food supply.
-cover: ""
-coverAlt: ""
-coverCaption: "[Caption: who is pictured, and where.]"
+cover: /images/3904a38c0f75f7950445a84a795cc83f.webp
+coverAlt: ''
+coverCaption: '[Caption: who is pictured, and where.]'
 gallery: []
-video: ""
+video: ''
 ---
+
 The Obaatanpa Project, led by Madam Angela Ahimah, donated 100 crates of eggs to the Wassa Akropong Government Hospital on Tuesday, to support patients' nutrition and ease the hospital's food supply burden.
 
 The donation forms part of the project's goal to promote health and wellness across the Amenfi East Municipality.
@@ -23,4 +24,4 @@ Miss Catherine Ayiah, Head of the ENT Department, also thanked the project for t
 
 The team went on to hold a health and wellness orientation for fresh students at Amenfiman Senior High School. [Read that report](/news/orientation/).
 
-*[Check every name and title in this report before relying on it. Reported locally by Tikese3 TV.]*
+_[Check every name and title in this report before relying on it. Reported locally by Tikese3 TV.]_
