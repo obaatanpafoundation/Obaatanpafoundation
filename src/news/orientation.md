@@ -3,12 +3,13 @@ title: Freshers at Amenfiman SHS get a health and wellness orientation
 date: 2025-11-04
 category: Education & Advocacy
 standfirst: Gender-based violence, reproductive health rights, mental health and bullying — discussed openly with students beginning senior high school.
-cover: ""
-coverAlt: ""
-coverCaption: "[Caption: the session at Amenfiman Senior High School.]"
+cover: /images/ed01dd5cdcae436f5f2219c5933e7499.webp
+coverAlt: ''
+coverCaption: ''
 gallery: []
-video: ""
+video: ''
 ---
+
 As part of the day's outreach, the Obaatanpa team held a comprehensive orientation session for fresh students of Amenfiman Senior High School, focusing on issues that shape a young person's first year away from home.
 
 ## What was covered
@@ -23,4 +24,4 @@ The session closed with an address from Madam Angela Ahimah, known in the commun
 
 [Add a paragraph here on what the school said, how many students attended, and whether a follow-up session is planned.]
 
-*[Check every name and title in this report before relying on it. Reported locally by Tikese3 TV.]*
+_[Reported locally by Tikese3 TV.]_
