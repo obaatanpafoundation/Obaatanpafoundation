@@ -3,7 +3,7 @@ title: 100 crates of eggs for Wassa Akropong Government Hospital
 date: 2025-11-04
 category: Health & Dignity
 standfirst: Delivered by hand on a Tuesday morning, to support patients' nutrition and ease the pressure on the hospital's food supply.
-cover: ''
+cover: /images/e1b272dc21ab8b24f86621d6c5fb5702.webp
 coverAlt: ''
 coverCaption: ''
 gallery: []
