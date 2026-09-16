@@ -5,7 +5,7 @@ category: Health & Dignity
 standfirst: Delivered by hand on a Tuesday morning, to support patients' nutrition and ease the pressure on the hospital's food supply.
 cover: ''
 coverAlt: ''
-coverCaption: '[Caption: who is pictured, and where.]'
+coverCaption: ''
 gallery: []
 video: ''
 ---
