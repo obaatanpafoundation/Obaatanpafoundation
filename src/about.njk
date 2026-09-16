@@ -1,14 +1,14 @@
 ---
 layout: base.njk
 title: About us
-description: Who we are, where we work, how we work, and what we do with what we are given.
+description: Who we are, our vision and mission, what we do, and who we serve across the Wassa Amenfi East Municipality.
 permalink: /about/index.html
 ---
 <section class="page-hero">
   <div class="wrap">
     <p class="crumbs"><a href="/">Home</a> &rsaquo; About</p>
     <h1>A foundation named for a standard.</h1>
-    <p>Obaatanpa is Twi for the good mother &mdash; the one who provides, who protects, and who does not count the cost. We took the name so that anyone could hold us to it.</p>
+    <p>Obaatanpa means the Good Mother. She provides, she protects, and she does not count the cost. We took the name so that anyone could hold us to it.</p>
   </div>
 </section>
 
@@ -17,32 +17,90 @@ permalink: /about/index.html
     <nav class="toc" aria-label="On this page">
       <h2>On this page</h2>
       <ul>
-        <li><a href="#story">Our story</a></li>
-        <li><a href="#purpose">What we are for</a></li>
-        <li><a href="#approach">How we work</a></li>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#vision">Vision and mission</a></li>
+        <li><a href="#values">Our values</a></li>
+        <li><a href="#objectives">Aims and objectives</a></li>
+        <li><a href="#serve">Who we serve</a></li>
         <li><a href="#where">Where we work</a></li>
         <li><a href="#accountability">Accountability</a></li>
       </ul>
     </nav>
 
     <div class="prose">
-      <h2 id="story">Our story</h2>
-      <p>[Write the real story here, in your own words. Donors read this section more closely than any other page. Cover the moment the foundation started, who was there, what the first outreach was, and why these three areas of work.]</p>
-      <p>The Obaatanpa Project was founded by Madam Angela Ahimah to bring care, compassion and commitment to community development across the Amenfi East Municipality. What began as visits to elders in Wassa Akropong has grown into three standing programmes: feeding our aged, supporting the Wassa Akropong Government Hospital, and going into schools to talk with young people about health, safety and self-respect.</p>
+      <h2 id="who">Who we are</h2>
+      <p>{{ about.whoWeAre }}</p>
 
-      <h2 id="purpose">What we are for</h2>
-      <p><strong>Our purpose.</strong> That no elder in Amenfi East eats alone, that our hospital is never short of what patients need, and that every young person leaves school knowing how to protect their health and their dignity.</p>
-      <p><strong>What we believe.</strong> In Madam Ahimah's words: good health is a foundation for progress. Everything we do follows from that.</p>
+      <h2 id="vision">Vision and mission</h2>
+      <p><strong>Our vision.</strong> {{ about.vision }}</p>
+      <p><strong>Our mission.</strong> {{ about.mission }}</p>
 
-      <h2 id="approach">How we work</h2>
-      <h3>We show up in person</h3>
-      <p>Donations are delivered by hand, and our team sits with the people receiving them. That is how we learn what is actually needed next.</p>
-      <h3>We work with what exists</h3>
-      <p>We support the hospital, the schools and the churches already serving this community rather than building anything parallel to them.</p>
-      <h3>We stay local</h3>
-      <p>Amenfi East is our home. We would rather do a small number of things properly here than spread thinly across the region.</p>
-      <h3>We say what we did</h3>
-      <p>Every outreach is reported here and on our Facebook page, with photographs and the names of the people involved, where they have agreed to be named.</p>
+      <h2 id="why">Why this work is needed</h2>
+      <p>{{ about.problem }}</p>
+      <p>{{ about.promise }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light" id="values">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we stand on.</h2>
+      <p class="lede">Five values. We would rather be held to these than to a slogan.</p>
+    </div>
+    <div class="principles">
+      {% for v in about.values %}
+      <div>
+        <h3>{{ v.name }}</h3>
+        <p>{{ v.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="programmes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we do.</h2>
+      <p class="lede">Four areas of work across the Wassa Amenfi East Municipality, each chosen because someone in the community asked for it.</p>
+    </div>
+    <div class="prog">
+      {% for p in home.programmes %}
+      <article>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.body }}</p>
+        {% if p.metaLabel %}<dl><dt>{{ p.metaLabel }}</dt><dd>{{ p.metaValue }}</dd></dl>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light" id="objectives">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Aims and objectives.</h2>
+      <p class="lede">Our aim: to empower women and the girl child to thrive in an inclusive society in the Wassa Amenfi East Municipality. These are the six objectives that follow from it.</p>
+    </div>
+    <ol class="steps">
+      {% for o in about.objectives %}
+      <li><p style="margin:0">{{ o }}</p></li>
+      {% endfor %}
+    </ol>
+
+    <div class="notice" style="margin-top:2.5rem;max-width:70ch">
+      <p><strong>Our five-year goal.</strong> {{ about.goal }}</p>
+      <p><strong>Who we aim to reach:</strong> {{ about.target }} That is a target we have set ourselves, not a figure we have already reached &mdash; we will report progress against it here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="serve">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Who we serve.</h2>
+      <p class="lede">{{ about.whoWeServe }}</p>
     </div>
   </div>
 </section>
@@ -51,20 +109,16 @@ permalink: /about/index.html
   <div class="wrap">
     <div class="sec-head">
       <h2>Where we work.</h2>
-      <p class="lede">The Amenfi East Municipality, in the Western Region of Ghana.</p>
+      <p class="lede">The Wassa Amenfi East Municipality, in the Western Region of Ghana.</p>
     </div>
     <div class="where">
       <div>
         <h3>Wassa Akropong</h3>
-        <p>Our base. Feeding programmes, church visits and support to the Wassa Akropong Government Hospital.</p>
+        <p>Our base. Outreach to elders and persons with disabilities, and support to the Wassa Akropong Government Hospital.</p>
       </div>
       <div>
         <h3>Schools across the municipality</h3>
-        <p>Health and wellness orientations, most recently for fresh students at Amenfiman Senior High School.</p>
-      </div>
-      <div>
-        <h3>[Other communities]</h3>
-        <p>[List any other towns or villages you have worked in, or remove this box.]</p>
+        <p>Mentorship and health sessions for adolescent girls and boys, most recently at Amenfiman Senior High School.</p>
       </div>
     </div>
   </div>
@@ -77,18 +131,14 @@ permalink: /about/index.html
       <p class="lede">We are asking people to trust us with their money. These are the details that let them check us.</p>
     </div>
 
-    <div class="notice" style="max-width:70ch">
-      <p><strong>To be completed.</strong> Fill in the registration details once the foundation is registered, and replace this box with income and expenditure figures for the year. If you are not yet registered, say so plainly &mdash; supporters respect honesty more than polish.</p>
-    </div>
-
     <div class="cards-2" style="margin-bottom:2.5rem">
       <article class="contact-card">
         <h3>Registration</h3>
-        <p>Registered in Ghana as [company limited by guarantee / NGO], registration number {{ site.registration }}. Department of Social Welfare number [number].</p>
+        {% if site.registration and not site.registration.startsWith("[") %}<p>Registered in Ghana, registration number {{ site.registration }}.</p>{% else %}<p>Registration with the Registrar-General's Department and the Department of Social Welfare is in progress. We will publish the numbers here as soon as they are issued.</p>{% endif %}
       </article>
       <article class="contact-card">
         <h3>Policies</h3>
-        <p>Because we work with elders, children and young people in schools, these must be in place.</p>
+        <p>Because we work with women, children in schools, elders and persons with disabilities, these must be in place.</p>
         <p><a class="link" href="/safeguarding/">Safeguarding policy</a><br>
            <a class="link" href="/privacy/">Privacy notice</a></p>
       </article>
@@ -103,8 +153,8 @@ permalink: /about/index.html
 <section class="cta-band">
   <div class="wrap">
     <div>
-      <h2>Every gift becomes something a neighbour can hold.</h2>
-      <p>A crate of eggs, a hot meal, a term's exercise books.</p>
+      <h2>We give tools, not handouts.</h2>
+      <p>Sanitary materials, food, medical care, and the equipment that makes a woman self-reliant.</p>
     </div>
     <a class="btn btn-dark" href="/donate/">Give today</a>
   </div>

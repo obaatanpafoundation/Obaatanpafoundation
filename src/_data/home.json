@@ -1,7 +1,7 @@
 {
-  "heading": "Care, compassion, commitment.",
-  "lede": "The Obaatanpa Foundation serves the people of the Amenfi East Municipality \u2014 feeding our elders, supporting the Wassa Akropong Government Hospital, and equipping young people with the knowledge to protect themselves.",
-  "meaning": "in Twi, the good mother. The one who provides, who protects, and who does not count the cost. It is the standard we hold ourselves to.",
+  "heading": "Empower a mother, and you empower a whole generation.",
+  "lede": "Obaatanpa Foundation works across the Wassa Amenfi East Municipality with mothers, adolescent girls, the aged and persons with disabilities — providing dignity, support, and the tools to become self-reliant.",
+  "meaning": "in Akan, the Good Mother. She provides, she protects, and she does not count the cost. It is the standard we hold ourselves to.",
   "heroImage": "",
   "heroAlt": "",
   "heroCaption": "[Caption: who is in the photograph, where, and when.]",
@@ -13,22 +13,28 @@
   "quoteImageAlt": "",
   "programmes": [
     {
-      "title": "Feed the Aged",
-      "body": "Grand feeding programmes for senior citizens, and visits to local churches across Wassa Akropong to sit with our elders, share a meal and hear what they need. Old age should not mean being forgotten.",
-      "metaLabel": "Where",
-      "metaValue": "Wassa Akropong"
-    },
-    {
-      "title": "Healthcare Support",
-      "body": "Essential items and nutritional support for the Wassa Akropong Government Hospital, easing the pressure on the food supply and supporting patients' recovery. In November 2025 we delivered 100 crates of eggs.",
-      "metaLabel": "Partner",
-      "metaValue": "Wassa Akropong Gov't Hospital"
-    },
-    {
-      "title": "Youth Empowerment",
-      "body": "Orientation sessions in senior high schools covering gender-based violence and reproductive health rights, adolescent health and hygiene, mental health and peer pressure, and bullying and discrimination.",
+      "title": "Health & Dignity",
+      "body": "Sanitary materials, medical care and health education for mothers and adolescent girls — so that no girl misses school for want of a pad, and no mother goes without care.",
       "metaLabel": "Recent",
-      "metaValue": "Amenfiman SHS"
+      "metaValue": "100 crates of eggs to the Government Hospital"
+    },
+    {
+      "title": "Social Support",
+      "body": "Food items and essential supplies for the aged and for persons living with disabilities, delivered in person, with time taken to sit and listen to what is needed next.",
+      "metaLabel": "Where",
+      "metaValue": "Wassa Akropong and beyond"
+    },
+    {
+      "title": "Economic Empowerment",
+      "body": "Tools and equipment that let a woman earn for herself and support her household. We give tools, not handouts — the difference is whether the help lasts.",
+      "metaLabel": "Approach",
+      "metaValue": "Tools, not handouts"
+    },
+    {
+      "title": "Education & Advocacy",
+      "body": "Outreach in schools mentoring adolescent girls and boys, and advocacy with the wider community on gender responsiveness, sensitivity, equality and equity.",
+      "metaLabel": "Recent",
+      "metaValue": "Amenfiman Senior High School"
     }
   ]
 }

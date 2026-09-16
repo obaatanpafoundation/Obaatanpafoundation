@@ -34,7 +34,7 @@ collections:
       - name: category
         label: Category
         widget: select
-        options: [Feed the Aged, Healthcare Support, Youth Empowerment, Events, Announcement]
+        options: [Health & Dignity, Social Support, Economic Empowerment, Education & Advocacy, Events, Announcement]
       - { name: standfirst, label: Summary line, widget: text, hint: "One sentence with the real number in it if you have one. Shows on the news listing." }
       - { name: cover, label: Cover photo, widget: image, required: false }
       - { name: coverAlt, label: Cover photo description, widget: string, required: false, hint: "Describe the photo for blind visitors. Do not write 'photo of'." }
@@ -103,6 +103,8 @@ collections:
         file: src/_data/site.json
         fields:
           - { name: name, label: Organisation name, widget: string }
+          - { name: logo, label: Logo image, widget: image, required: false, hint: "Upload the foundation logo. A PNG with a transparent background works best. Leave empty to use the simple mark." }
+          - { name: motto, label: Motto, widget: string, required: false }
           - { name: tagline, label: Footer tagline, widget: text }
           - { name: url, label: Website address, widget: string }
           - { name: email, label: Email address, widget: string }
@@ -127,6 +129,30 @@ collections:
             fields:
               - { name: number, label: Number, widget: string }
               - { name: label, label: What it counts, widget: string }
+
+      - name: about
+        label: About page
+        file: src/_data/about.json
+        fields:
+          - { name: whoWeAre, label: Who we are, widget: text }
+          - { name: vision, label: Our vision, widget: text }
+          - { name: mission, label: Our mission, widget: text }
+          - name: values
+            label: Core values
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Value, widget: string }
+              - { name: body, label: What it means, widget: string }
+          - { name: problem, label: Why this work is needed, widget: text }
+          - { name: promise, label: Our promise, widget: text }
+          - { name: whoWeServe, label: Who we serve, widget: text }
+          - name: objectives
+            label: Objectives
+            widget: list
+            field: { name: objective, label: Objective, widget: string }
+          - { name: goal, label: Five-year goal, widget: text }
+          - { name: target, label: Five-year target, widget: string, hint: "Phrase this as a target, never as a figure already achieved." }
 
       - name: homepage
         label: Homepage

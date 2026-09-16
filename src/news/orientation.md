@@ -1,7 +1,7 @@
 ---
 title: Freshers at Amenfiman SHS get a health and wellness orientation
 date: 2025-11-04
-category: Youth Empowerment
+category: Education & Advocacy
 standfirst: Gender-based violence, reproductive health rights, mental health and bullying — discussed openly with students beginning senior high school.
 cover: ""
 coverAlt: ""

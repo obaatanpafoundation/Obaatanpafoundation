@@ -1,11 +1,11 @@
 {
   "name": "Obaatanpa Foundation",
-  "tagline": "Care, compassion and commitment to community development across the Amenfi East Municipality.",
+  "tagline": "Empowering women, girls and vulnerable groups across the Wassa Amenfi East Municipality.",
   "url": "https://obaatanpafoundation.org",
   "email": "obaatanpafoundation2025@gmail.com",
   "phone": "+233 24 000 0000",
   "addressLine1": "Wassa Akropong",
-  "addressLine2": "Amenfi East Municipality",
+  "addressLine2": "Wassa Amenfi East Municipality",
   "addressLine3": "Western Region, Ghana",
   "openingHours": "[Opening days and hours]",
   "registration": "[registration number]",
@@ -23,15 +23,17 @@
     },
     {
       "number": "[00]",
-      "label": "senior citizens served through the Feed the Aged project"
+      "label": "women and girls reached through outreach so far"
     },
     {
       "number": "[00]",
-      "label": "students reached through school outreach sessions"
+      "label": "schools visited across the municipality"
     },
     {
-      "number": "[00]",
-      "label": "communities visited across Amenfi East"
+      "number": "5,000+",
+      "label": "people we aim to reach over the next five years"
     }
-  ]
+  ],
+  "logo": "",
+  "motto": "Caring today, empowering for a lifetime"
 }

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Leadership
-description: The executives and volunteers who lead the Obaatanpa Foundation in the Amenfi East Municipality.
+description: The executives and volunteers who lead the Obaatanpa Foundation in the Wassa Amenfi East Municipality.
 permalink: /leadership/index.html
 ---
 <section class="page-hero">
@@ -18,7 +18,7 @@ permalink: /leadership/index.html
       {% if person.data.featured %}
       <div class="exec-lead">
         {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
-        {% else %}<div class="thumb photo photo-light"><span>PHOTO SLOT</span>Portrait, about 800x1000px.</div>{% endif %}
+        {% else %}<div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#0F2E27" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#0F2E27"/></svg></div>{% endif %}
         <div class="exec-lead-body">
           <h3>{{ person.data.name }}</h3>
           <p class="role">{{ person.data.role }}</p>
@@ -34,7 +34,7 @@ permalink: /leadership/index.html
         {% if not person.data.featured %}
         <article class="exec">
           {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
-          {% else %}<div class="thumb photo photo-light"><span>PHOTO</span>Square portrait, 600x600px.</div>{% endif %}
+          {% else %}<div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#0F2E27" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#0F2E27"/></svg></div>{% endif %}
           <div class="exec-body">
             <h3>{{ person.data.name }}</h3>
             <p class="role">{{ person.data.role }}</p>

@@ -12,7 +12,7 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:image" content="{{ site.url }}/images/social-share.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230F2E27'/><path d='M16 7c5 0 8 3.2 8 7.4 0 4-3 6.3-8 10.6-5-4.3-8-6.6-8-10.6C8 10.2 11 7 16 7z' fill='none' stroke='%23E0A83C' stroke-width='2.2'/><circle cx='16' cy='14.4' r='2.6' fill='%23E0A83C'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231A3053'/><path d='M16 7c5 0 8 3.2 8 7.4 0 4-3 6.3-8 10.6-5-4.3-8-6.6-8-10.6C8 10.2 11 7 16 7z' fill='none' stroke='%23C89237' stroke-width='2.2'/><circle cx='16' cy='14.4' r='2.6' fill='%23C89237'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,10 +24,14 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="/">
+      {% if site.logo %}
+      <img class="brand-logo" src="{{ site.logo }}" alt="{{ site.name }}">
+      {% else %}
       <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.8"/>
-        <circle cx="16" cy="13.3" r="3" fill="#E0A83C"/>
+        <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#C89237" stroke-width="1.8"/>
+        <circle cx="16" cy="13.3" r="3" fill="#C89237"/>
       </svg>
+      {% endif %}
       <span class="brand-name">Obaatanpa<span class="brand-sub">FOUNDATION</span></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -51,12 +55,17 @@
     <div class="foot-grid">
       <div>
         <a class="brand" href="/" style="margin-bottom:.5rem">
+          {% if site.logo %}
+          <img class="brand-logo" src="{{ site.logo }}" alt="{{ site.name }}">
+          {% else %}
           <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.8"/>
-            <circle cx="16" cy="13.3" r="3" fill="#E0A83C"/>
+            <path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#C89237" stroke-width="1.8"/>
+            <circle cx="16" cy="13.3" r="3" fill="#C89237"/>
           </svg>
+          {% endif %}
           <span class="brand-name">Obaatanpa<span class="brand-sub">FOUNDATION</span></span>
         </a>
+        {% if site.motto %}<p class="motto">{{ site.motto }}</p>{% endif %}
         <p class="foot-blurb">{{ site.tagline }}</p>
       </div>
       <div>
@@ -92,7 +101,7 @@
       </div>
     </div>
     <div class="foot-base">
-      <p style="margin:0">&copy; <span id="year">2026</span> {{ site.name }}. Registered in Ghana, {{ site.registration }}.</p>
+      <p style="margin:0">&copy; <span id="year">2026</span> {{ site.name }}.{% if site.registration and not site.registration.startsWith("[") %} Registered in Ghana, {{ site.registration }}.{% endif %}</p>
       <p style="margin:0"><a href="/privacy/">Privacy</a> &middot; <a href="/safeguarding/">Safeguarding</a> &middot; <a href="/about/#accountability">Accountability</a></p>
     </div>
   </div>

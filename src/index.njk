@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Care and compassion in Amenfi East
-description: The Obaatanpa Foundation serves the Amenfi East Municipality through the Feed the Aged project, healthcare support for Wassa Akropong Government Hospital, and youth empowerment in schools.
+title: Care and compassion in Wassa Amenfi East
+description: The Obaatanpa Foundation serves the Wassa Amenfi East Municipality through the Feed the Aged project, healthcare support for Wassa Akropong Government Hospital, and youth empowerment in schools.
 permalink: /index.html
 ---
 <section class="hero">
@@ -20,7 +20,7 @@ permalink: /index.html
       {% if home.heroImage %}
       <img src="{{ home.heroImage }}" alt="{{ home.heroAlt }}">
       {% else %}
-      <div class="photo"><span>PHOTO SLOT</span>Add a hero photo in the content manager, under Homepage.</div>
+      <div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#E0A83C"/></svg></div>
       {% endif %}
       {% if home.heroCaption %}<figcaption class="figcap">{{ home.heroCaption }}</figcaption>{% endif %}
     </figure>
@@ -41,7 +41,7 @@ permalink: /index.html
   <div class="wrap">
     <div class="sec-head">
       <h2>What we do.</h2>
-      <p class="lede">Three areas of work, all of them in the Amenfi East Municipality, all of them chosen because someone in the community asked.</p>
+      <p class="lede">Four areas of work across the Wassa Amenfi East Municipality, each chosen because someone in the community asked for it. <a class="link" href="/about/">Read our vision and mission</a></p>
     </div>
     <div class="prog">
       {% for p in home.programmes %}
@@ -61,7 +61,7 @@ permalink: /index.html
       {% if home.quoteImage %}
       <img src="{{ home.quoteImage }}" alt="{{ home.quoteImageAlt }}">
       {% else %}
-      <div class="photo"><span>PHOTO SLOT</span>Add a portrait in the content manager, under Homepage.</div>
+      <div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#E0A83C" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#E0A83C"/></svg></div>
       {% endif %}
     </figure>
     <blockquote>
@@ -82,7 +82,7 @@ permalink: /index.html
       {% for person in collections.executives | limit(3) %}
       <article class="exec">
         {% if person.data.photo %}<img src="{{ person.data.photo }}" alt="{{ person.data.name }}">
-        {% else %}<div class="thumb photo photo-light"><span>PHOTO</span>Square portrait.</div>{% endif %}
+        {% else %}<div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#0F2E27" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#0F2E27"/></svg></div>{% endif %}
         <div class="exec-body">
           <h3>{{ person.data.name }}</h3>
           <p class="role">{{ person.data.role }}</p>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: News
-description: Reports from our outreaches across the Amenfi East Municipality.
+description: Reports from our outreaches across the Wassa Amenfi East Municipality.
 permalink: /news/index.html
 ---
 <section class="page-hero">
@@ -19,7 +19,7 @@ permalink: /news/index.html
       {% for post in collections.posts %}
       <article>
         {% if post.data.cover %}<img class="thumb" src="{{ post.data.cover }}" alt="{{ post.data.coverAlt }}">
-        {% else %}<div class="thumb photo photo-light"><span>PHOTO</span>No cover image yet.</div>{% endif %}
+        {% else %}<div class="photo-quiet"><svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c5.6 0 9 3.6 9 8.3 0 4.5-3.4 7.1-9 11.9-5.6-4.8-9-7.4-9-11.9C7 8.6 10.4 5 16 5z" fill="none" stroke="#0F2E27" stroke-width="1.6"/><circle cx="16" cy="13.3" r="2.6" fill="#0F2E27"/></svg></div>{% endif %}
         <p class="tag">{{ post.data.category }}</p>
         <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
         <p>{{ post.data.standfirst }}</p>

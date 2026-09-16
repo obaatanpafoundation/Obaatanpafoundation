@@ -23,23 +23,23 @@ permalink: /donate/index.html
 
         <div class="amounts" role="group" aria-label="Choose an amount in Ghana cedis">
           <button class="amt" type="button" data-amount="50" aria-pressed="false"
-            data-once="Sends [one crate] of eggs to the Wassa Akropong Government Hospital."
-            data-monthly="Sends [one crate] of eggs to the hospital every month of the year.">GH&#8373;50</button>
+            data-once="Provides sanitary materials for a group of adolescent girls for a full term."
+            data-monthly="Keeps a group of girls supplied with sanitary materials all year round.">GH&#8373;50</button>
           <button class="amt" type="button" data-amount="150" aria-pressed="false"
-            data-once="Provides a hot meal for [00] elders at a Feed the Aged gathering."
-            data-monthly="Feeds [00] elders every month, all year.">GH&#8373;150</button>
+            data-once="Provides food items for elderly people and persons living with disabilities."
+            data-monthly="Supports elderly households with food every month of the year.">GH&#8373;150</button>
           <button class="amt" type="button" data-amount="400" aria-pressed="true"
-            data-once="Covers materials and transport for one school health and wellness session."
+            data-once="Covers materials and transport for one school mentorship and health session."
             data-monthly="Puts our team into one school every month of the school year.">GH&#8373;400</button>
           <button class="amt" type="button" data-amount="1000" aria-pressed="false"
-            data-once="Funds a church visit and feeding programme for [00] senior citizens."
-            data-monthly="Sustains the Feed the Aged programme month after month.">GH&#8373;1,000</button>
+            data-once="Buys the tools or equipment one woman needs to start earning for herself."
+            data-monthly="Equips one woman to become self-reliant, every month.">GH&#8373;1,000</button>
           <button class="amt" type="button" data-amount="5000" aria-pressed="false"
-            data-once="Underwrites a full outreach day: hospital donation in the morning, school session in the afternoon."
+            data-once="Underwrites a full community outreach day across the municipality."
             data-monthly="Underwrites a full outreach day every single month.">GH&#8373;5,000</button>
         </div>
 
-        <p class="effect" id="effect" role="status">Covers materials and transport for one school health and wellness session.</p>
+        <p class="effect" id="effect" role="status">Covers materials and transport for one school mentorship and health session.</p>
 
         <div class="custom">
           <label for="custom-amount">Other amount in Ghana cedis</label>
@@ -50,10 +50,11 @@ permalink: /donate/index.html
         <div class="pay" id="how-to-pay">
           <h3>Ways to give</h3>
           <ul>
-            <li><b>MTN MoMo</b> &mdash; {{ site.momoMtn }}</li>
-            <li><b>Telecel Cash</b> &mdash; {{ site.momoTelecel }}</li>
-            <li><b>AT Money</b> &mdash; {{ site.momoAt }}</li>
-            <li><b>Bank transfer</b> &mdash; {{ site.bank }}</li>
+            {% if site.momoMtn and not site.momoMtn.startsWith("[") %}<li><b>MTN MoMo</b> &mdash; {{ site.momoMtn }}</li>{% endif %}
+            {% if site.momoTelecel and not site.momoTelecel.startsWith("[") %}<li><b>Telecel Cash</b> &mdash; {{ site.momoTelecel }}</li>{% endif %}
+            {% if site.momoAt and not site.momoAt.startsWith("[") %}<li><b>AT Money</b> &mdash; {{ site.momoAt }}</li>{% endif %}
+            {% if site.bank and not site.bank.startsWith("[") %}<li><b>Bank transfer</b> &mdash; {{ site.bank }}</li>{% endif %}
+            <li><b>By phone</b> &mdash; call us on {{ site.phone }} and we will tell you the quickest way to give</li>
             <li><b>In person</b> &mdash; visit us in {{ site.addressLine1 }}, or speak to any member of the team at an outreach</li>
           </ul>
           <p style="margin-top:1rem;color:var(--muted);font-size:.95rem">
@@ -65,7 +66,7 @@ permalink: /donate/index.html
       <div class="other-ways">
         <article>
           <h3>Give in kind</h3>
-          <p>Food items, hospital consumables, exercise books and sanitary products all go straight to where they are needed. Tell us what you have and we will say honestly whether we can use it.</p>
+          <p>Sanitary materials, food items, hospital consumables, exercise books, tools and equipment all go straight to where they are needed. Tell us what you have and we will say honestly whether we can use it.</p>
           <a class="link" href="/contact/">Ask what is needed</a>
         </article>
         <article>
@@ -98,15 +99,15 @@ permalink: /donate/index.html
       </details>
       <details>
         <summary>Can I choose which programme my gift supports?</summary>
-        <p>Yes &mdash; tell us when you give and we will apply it to Feed the Aged, healthcare support, or the school outreach. If you do not specify, we use it where the need is greatest that month.</p>
+        <p>Yes &mdash; tell us when you give and we will apply it to health and dignity, social support, economic empowerment, or education and advocacy. If you do not specify, we use it where the need is greatest that month.</p>
       </details>
       <details>
         <summary>Can I give from outside Ghana?</summary>
-        <p>[Add international transfer details, or a card payment link once you have one. Paystack and Hubtel both work well for Ghanaian organisations and handle mobile money and cards together.]</p>
+        <p>Yes. Write to us at {{ site.email }} and we will send you transfer details. We are working on adding card payments so gifts from abroad can be made directly on this page.</p>
       </details>
       <details>
         <summary>Is the foundation registered?</summary>
-        <p>[Answer plainly. If registration is complete, give the number. If it is in progress, say so and say when you expect it.]</p>
+        {% if site.registration and not site.registration.startsWith("[") %}<p>Yes. We are registered in Ghana, registration number {{ site.registration }}.</p>{% else %}<p>Registration with the Registrar-General's Department and the Department of Social Welfare is in progress. We would rather tell you that plainly than leave the question unanswered, and we will publish the numbers here as soon as they are issued.</p>{% endif %}
       </details>
       <details>
         <summary>Will you keep contacting me?</summary>
